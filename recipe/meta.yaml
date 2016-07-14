@@ -1,6 +1,6 @@
 {% set name = 'jupyter_nbextensions_configurator' %}
-{% set version = '0.2.0' %}
-{% set md5 = 'b5e2c92c13a32897b703dce00d341145' %}
+{% set version = '0.2.1' %}
+{% set md5 = '86efebd441f4404a6194d11c14383430' %}
 
 package:
   name: {{ name }}
