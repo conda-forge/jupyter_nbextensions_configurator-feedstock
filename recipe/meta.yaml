@@ -1,6 +1,6 @@
 {% set name = 'jupyter_nbextensions_configurator' %}
-{% set version = '0.2.1' %}
-{% set md5 = '86efebd441f4404a6194d11c14383430' %}
+{% set version = '0.2.2' %}
+{% set sha256 = '9808c2f7b7758030ba904431ffb1c69e93f6e9a6e6c9f2a58dd5ab9fc6d3b2ca' %}
 
 package:
   name: {{ name }}
@@ -9,10 +9,10 @@ package:
 source:
     fn: {{ name }}-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    md5: {{ md5 }}
+    sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
