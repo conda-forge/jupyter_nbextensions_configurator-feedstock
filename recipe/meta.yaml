@@ -1,6 +1,6 @@
 {% set name = 'jupyter_nbextensions_configurator' %}
-{% set version = '0.2.5' %}
-{% set sha256 = '97c54dbf704420d654cf0b490854e191e6dd45063a292fb73e9ab845b47848f9' %}
+{% set version = '0.2.6' %}
+{% set sha256 = 'f2e9d0f2650dfc89a305559a44b1c9b24bcfb19d6a49749877e8aae58071a0a8' %}
 
 package:
   name: {{ name }}
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python
-    - jupyter_contrib_core >=0.2
+    - jupyter_contrib_core >=0.3.2
     - jupyter_core
     - nbconvert
     - notebook >=4.0
