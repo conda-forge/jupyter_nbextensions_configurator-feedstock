@@ -1,6 +1,6 @@
 {% set name = 'jupyter_nbextensions_configurator' %}
-{% set version = '0.2.7' %}
-{% set sha256 = '5bf86974a75d721857642ba75a14424a601ff2ac50ebc69f4a903b0059c024c9' %}
+{% set version = '0.2.8' %}
+{% set sha256 = 'f26bc57cf8ecfddcbe3f868b7c573cd3052528f184553fa57c0abde8351e72e0' %}
 
 package:
   name: {{ name }}
