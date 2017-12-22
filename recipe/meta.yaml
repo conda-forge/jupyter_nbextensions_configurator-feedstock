@@ -14,6 +14,8 @@ source:
 build:
   number: 1
   script: pip install --no-deps .
+  entry_points:
+    - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
 
 requirements:
   build:
