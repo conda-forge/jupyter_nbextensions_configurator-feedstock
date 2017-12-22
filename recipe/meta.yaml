@@ -12,13 +12,15 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 1
+  script: pip install --no-deps .
+  entry_points:
+    - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - jupyter_contrib_core >=0.3.2
@@ -26,7 +28,6 @@ requirements:
     - nbconvert
     - notebook >=4.0
     - pyyaml
-    - setuptools
     - tornado
     - traitlets
 
