@@ -1,6 +1,6 @@
 {% set name = 'jupyter_nbextensions_configurator' %}
-{% set version = '0.2.8' %}
-{% set sha256 = 'f26bc57cf8ecfddcbe3f868b7c573cd3052528f184553fa57c0abde8351e72e0' %}
+{% set version = '0.3.0' %}
+{% set sha256 = 'cb28e7f2036c90b644f3f51c457e7eb8b466bb8040dd2ec0c848ab27620b1887' %}
 
 package:
   name: {{ name }}
@@ -12,10 +12,11 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: pip install --no-deps .
   entry_points:
     - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
+
 
 requirements:
   build:
