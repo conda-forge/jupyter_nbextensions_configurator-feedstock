@@ -12,14 +12,15 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: pip install --no-deps .
+  noarch: python
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
 
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
