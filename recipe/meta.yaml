@@ -9,7 +9,7 @@ source:
     sha256: 778f36a0996e622c224589327405583f4a539d183fa2fdaeecbc4397c1af9991
 
 build:
-  number: 0
+  number: 1000
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
