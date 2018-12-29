@@ -1,6 +1,8 @@
 About jupyter_nbextensions_configurator
 =======================================
 
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
 Home: https://github.com/jupyter-contrib/jupyter_nbextensions_configurator
 
 Package license: BSD-3-Clause
@@ -16,7 +18,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/jupyter_nbextensions_configurator-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/jupyter_nbextensions_configurator-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/jupyter_nbextensions_configurator-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/jupyter_nbextensions_configurator-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/jupyter_nbextensions_configurator-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/jupyter-nbextensions-configurator-feedstock/branch/master)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/jupyter-nbextensions-configurator-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/jupyter-nbextensions-configurator-feedstock/branch/master)
 
 Current release info
 ====================
@@ -104,3 +106,9 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@jcb91](https://github.com/jcb91/)
+
