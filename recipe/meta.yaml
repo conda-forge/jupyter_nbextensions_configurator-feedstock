@@ -1,4 +1,4 @@
-{% set version = '0.4.0' %}
+{% set version = "0.4.1" %}
 
 package:
   name: jupyter_nbextensions_configurator
@@ -6,7 +6,7 @@ package:
 
 source:
     url: https://pypi.io/packages/source/j/jupyter_nbextensions_configurator/jupyter_nbextensions_configurator-{{ version }}.tar.gz
-    sha256: 778f36a0996e622c224589327405583f4a539d183fa2fdaeecbc4397c1af9991
+    sha256: e5e86b5d9d898e1ffb30ebb08e4ad8696999f798fef3ff3262d7b999076e4e83
 
 build:
   number: 1000
