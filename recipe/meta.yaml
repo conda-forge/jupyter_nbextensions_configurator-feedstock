@@ -1,17 +1,17 @@
-{% set version = '0.4.1' %}
+{% set version = "0.5.0" %}
 
 package:
   name: jupyter_nbextensions_configurator
   version: {{ version }}
 
 source:
-    url: https://pypi.io/packages/source/j/jupyter_nbextensions_configurator/jupyter_nbextensions_configurator-{{ version }}.tar.gz
-    sha256: e5e86b5d9d898e1ffb30ebb08e4ad8696999f798fef3ff3262d7b999076e4e83
+  url: https://pypi.io/packages/source/j/jupyter_nbextensions_configurator/jupyter_nbextensions_configurator-{{ version }}.tar.gz
+  sha256: bdc312c6baed70f6f35b464fa0bca850a266062c486af3e0ff601079e3238ceb
 
 build:
   noarch: python
-  number: 2
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
 
