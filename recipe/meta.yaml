@@ -11,7 +11,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
 
@@ -22,10 +22,9 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - jupyter_contrib_core >=0.3.2
+    - jupyter_contrib_core >=0.3.3
     - jupyter_core
-    - nbconvert
-    - notebook >=4.0
+    - notebook >=6.0
     - pyyaml
     - tornado
     - traitlets
@@ -34,11 +33,13 @@ test:
   imports:
     - jupyter_nbextensions_configurator
     - jupyter_nbextensions_configurator.application
-
+  requires:
+    - pip
   commands:
     - jupyter nbextensions_configurator --help
     - jupyter nbextensions_configurator enable --help
     - jupyter nbextensions_configurator disable --help
+    - pip check
 
 about:
   summary: A server extension for jupyter notebook providing configuration interfaces for notebook extensions (nbextensions).
