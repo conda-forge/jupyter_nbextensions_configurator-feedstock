@@ -1,11 +1,11 @@
-About jupyter_nbextensions_configurator
-=======================================
+About jupyter_nbextensions_configurator-feedstock
+=================================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_nbextensions_configurator-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyter-contrib/jupyter_nbextensions_configurator
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_nbextensions_configurator-feedstock/blob/main/LICENSE.txt)
 
 Summary: A server extension for jupyter notebook providing configuration interfaces for notebook extensions (nbextensions).
 
