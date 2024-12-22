@@ -5,12 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyter_nbextensions_configurator/jupyter_nbextensions_configurator-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/j/jupyter_nbextensions_configurator/jupyter_nbextensions_configurator-{{ version }}.tar.gz
   sha256: 4b9e1270ccc1f8e0a421efb8979a737f586813023a4855b9453f61c3ca599b82
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - jupyter_contrib_core >=0.3.3
     - jupyter_core
     - notebook >=6.0
@@ -35,6 +35,7 @@ test:
     - jupyter_nbextensions_configurator.application
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - jupyter nbextensions_configurator --help
     - jupyter nbextensions_configurator enable --help
