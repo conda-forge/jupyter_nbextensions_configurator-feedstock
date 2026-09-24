@@ -23,6 +23,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
+    - setuptools
   run:
     - python >=${{ python_min }}
     - jupyter_contrib_core >=0.3.3
