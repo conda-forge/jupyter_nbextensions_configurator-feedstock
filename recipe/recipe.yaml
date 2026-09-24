@@ -8,13 +8,13 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyter_nbextensions_configurator/jupyter_nbextensions_configurator-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/j/jupyter_nbextensions_configurator/jupyter_nbextensions_configurator-${{ version }}.tar.gz
   sha256: 4b9e1270ccc1f8e0a421efb8979a737f586813023a4855b9453f61c3ca599b82
 
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
       - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
