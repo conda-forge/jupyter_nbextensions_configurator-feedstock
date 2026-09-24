@@ -1,15 +1,16 @@
 schema_version: 1
 
 context:
-  version: "0.6.1"
+  version: "0.6.4"
 
 package:
   name: jupyter_nbextensions_configurator
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/j/jupyter_nbextensions_configurator/jupyter_nbextensions_configurator-${{ version }}.tar.gz
-  sha256: 4b9e1270ccc1f8e0a421efb8979a737f586813023a4855b9453f61c3ca599b82
+  # no sdist on PyPI anymore
+  url: https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator/archive/refs/tags/${{ version }}.tar.gz
+  sha256: f27c3904302adec913a3396b67401e4fd4ae6342e33505af9acc8e3fcf82dc30
 
 build:
   number: 0
@@ -28,7 +29,7 @@ requirements:
     - python >=${{ python_min }}
     - jupyter_contrib_core >=0.3.3
     - jupyter_core
-    - notebook >=6.0
+    - notebook >=6.0,<7
     - pyyaml
     - tornado
     - traitlets
