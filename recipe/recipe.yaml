@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  version: "0.6.4"
+
+package:
+  name: jupyter_nbextensions_configurator
+  version: ${{ version }}
+
+source:
+  # no sdist on PyPI anymore
+  url: https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator/archive/refs/tags/${{ version }}.tar.gz
+  sha256: f27c3904302adec913a3396b67401e4fd4ae6342e33505af9acc8e3fcf82dc30
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - jupyter-nbextensions_configurator = jupyter_nbextensions_configurator.application:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - jupyter_contrib_core >=0.3.3
+    - jupyter_core
+    - notebook >=6.0,<7
+    - pyyaml
+    - tornado
+    - traitlets
+
+tests:
+  - python:
+      imports:
+        - jupyter_nbextensions_configurator
+        - jupyter_nbextensions_configurator.application
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - script:
+      - jupyter nbextensions_configurator --help
+      - jupyter nbextensions_configurator enable --help
+      - jupyter nbextensions_configurator disable --help
+
+about:
+  summary: A server extension for jupyter notebook providing configuration interfaces for notebook extensions (nbextensions).
+  license_file: LICENSE.txt
+  license: BSD-3-Clause
+  homepage: https://github.com/jupyter-contrib/jupyter_nbextensions_configurator
+
+extra:
+  recipe-maintainers:
+    - jcb91
+    - xhochy
+    - mgorny
